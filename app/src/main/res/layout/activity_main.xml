@@ -14,7 +14,7 @@
         android:textSize="32sp"/>
 
     <EditText
-        android:id="@+id/edtxt"
+        android:id="@+id/edtxtName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/username"/>

@@ -10,8 +10,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class CountryList extends AppCompatActivity {
-    private String message;
-    EditText edCountry;
+
+    EditText edCountry,edName;
     Button btnAdd;
     TextView txtdisplay;
 
@@ -21,14 +21,9 @@ public class CountryList extends AppCompatActivity {
         setContentView(R.layout.activity_country_list);
 
         edCountry = findViewById(R.id.edtxtCountry);
+        edName = findViewById(R.id.edtxtName);
         btnAdd = findViewById(R.id.btnAdd);
         txtdisplay = findViewById(R.id.txtDisplayCountry);
-
-        //String message;
-        message = edCountry.getText().toString();
-
-
-
 
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,8 +32,13 @@ public class CountryList extends AppCompatActivity {
 
                 Toast.makeText(CountryList.this,"Button clicked",Toast.LENGTH_LONG).show();
 
-                txtdisplay.setText(message);
-                txtdisplay.append(message);
+                for(int i =0; i<10; i++) {
+
+                    String result = edCountry.getText().toString();
+                    txtdisplay.setText("Country:" + result+"\t");
+
+                }
+
 
             }
         });
