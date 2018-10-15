@@ -32,12 +32,8 @@ public class CountryList extends AppCompatActivity {
 
                 Toast.makeText(CountryList.this,"Button clicked",Toast.LENGTH_LONG).show();
 
-                for(int i =0; i<10; i++) {
-
-                    String result = edCountry.getText().toString();
-                    txtdisplay.setText("Country:" + result+"\t");
-
-                }
+                String message = edCountry.getText().toString();
+                txtdisplay.setText("Country: "+message);
 
 
             }
